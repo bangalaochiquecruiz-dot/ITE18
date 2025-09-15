@@ -23,10 +23,10 @@ themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
 
   if (document.body.classList.contains("light-mode")) {
-    themeToggle.textContent = "🌙 Dark Mode";
+    themeToggle.textContent = "🌙";
     localStorage.setItem("theme", "light");
   } else {
-    themeToggle.textContent = "☀️ Light Mode";
+    themeToggle.textContent = "☀️";
     localStorage.setItem("theme", "dark");
   }
 });
