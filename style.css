@@ -230,6 +230,7 @@ a {
 #add-project-btn,
 #add-skill-btn {
   display: none; 
+  margin: 0;
 }
 
 #edit-profile-btn:hover,
