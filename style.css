@@ -230,16 +230,6 @@ a {
 #add-project-btn,
 #add-skill-btn {
   display: none; 
-  margin: 1rem auto;
-  padding: 0.7rem 1.2rem;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  background: linear-gradient(90deg, var(--brand), var(--brand-dark));
-  color: #fff; /* unified text color */
-  text-align: center;
-  transition: filter 0.3s, transform 0.2s;
 }
 
 #edit-profile-btn:hover,
