@@ -5,23 +5,19 @@ const fs = require("fs");
 
 const app = express();
 
-// Ensure uploads folder exists
-const uploadDir = path.join(__dirname, "public/uploads");
+const uploadDir = path.join(__dirname, "uploads");
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-// Serve static files
 app.use(express.static("public"));
 
-// Storage config for multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, uploadDir),
   filename: (req, file, cb) =>
     cb(null, Date.now() + path.extname(file.originalname)),
 });
 
-// Multer with validation
 const uploads = multer({
   storage: storage,
   fileFilter: (req, file, cb) => {
@@ -37,15 +33,14 @@ const uploads = multer({
       cb(new Error("Only image files are allowed!"));
     }
   },
-  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
+  limits: { fileSize: 5 * 1024 * 1024 },
 });
 
-// Uploads route
 app.post("/uploads", uploads.single("image"), (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
   }
-  res.json({ filePath: "/uploads/" + req.file.filename });
+  res.json({ filePath: "uploads/" + req.file.filename });
 });
 
 // Start server
