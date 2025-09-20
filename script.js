@@ -137,7 +137,7 @@ addProjectBtn.addEventListener("click", () => {
       const formData = new FormData();
       formData.append("image", file);
 
-      fetch("/uploads", {
+      fetch("uploads", {
         method: "POST",
         body: formData,
       })
