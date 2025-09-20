@@ -1,7 +1,7 @@
 const editBtn = document.getElementById("edit-btn");
 const editProfileBtn = document.getElementById("edit-profile-btn");
 const addProjectBtn = document.getElementById("add-project-btn");
-const addSkillBtn = document.getElementById("add-skill-btn"); // <-- added
+const addSkillBtn = document.getElementById("add-skill-btn");
 const profileImg = document.getElementById("profile-img");
 
 const aboutSection = document.querySelector("#about p");
@@ -11,7 +11,7 @@ const projectsContainer = document.querySelector(
   "#projects .project-container"
 );
 
-const skillsList = document.querySelector("#skills ul"); // <-- added
+const skillsList = document.querySelector("#skills ul");
 
 // === Theme Toggle ===
 const themeToggle = document.getElementById("theme-toggle");
