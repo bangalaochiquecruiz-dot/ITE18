@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#content" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Cruiz</h1>
+        <nav class="site-nav">
+          <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+          <ul class="nav" id="nav" aria-label="Primary">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button id="theme-toggle">🌙</button>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      <section id="home" class="hero" aria-labelledby="intro-title">
+        <div class="container">
+          <div class="hero-grid">
+            <figure class="profile">
+              <img
+                id="profile-img"
+                src="uploads/Profile Picture.jpg"
+                alt="mainpic"
+              />
+              <figcaption>Live in Butuan City, Philippines</figcaption>
+            </figure>
+
+            <div class="text-box">
+              <h2 id="intro-title">Hi, I'm Chique Cruiz</h2>
+              <p class="lead">
+                A 3rd year IT College student under Caraga State University.
+              </p>
+              <a href="#projects" class="btn">View Projects</a>
+            </div>
+          </div>
+          <button class="btn" id="edit-btn">Edit</button>
+
+          <!-- Edit Modal -->
+          <div
+            id="edit-modal"
+            class="modal"
+            role="dialog"
+            aria-labelledby="edit-title"
+          >
+            <div class="modal-content">
+              <span id="close-modal" aria-label="Close modal">&times;</span>
+              <h3 id="edit-title">Choose Section to Edit</h3>
+
+              <!-- Dropdown -->
+              <select id="edit-section-select">
+                <option value="profile">Profile Picture</option>
+                <option value="about">About</option>
+                <option value="projects">Projects</option>
+                <option value="skills">Skills</option>
+                <option value="contact">Contact</option>
+              </select>
+
+              <!-- Dynamic form fields go here -->
+              <div id="edit-fields"></div>
+
+              <!-- Save button -->
+              <button id="save-edit-btn">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="container">
+          <h2 id="about-title">About me</h2>
+          <p>
+            I’m a student majoring in procrastination with a minor in panic, a
+            professional overthinker and part-time nap enthusiast, powered by
+            coffee, deadlines, and sheer luck, with a GPA as unstable as my WiFi
+            signal. You can reach me on my
+            <strong
+              ><a href="#contact">Email</a> or
+              <a href="https:github.com">GitHub</a></strong
+            >.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="projects" aria-labelledby="projects-title">
+        <div class="project-container">
+          <h2 class="projects-title">Project</h2>
+          <div class="cards">
+            <article class="card">
+              <img src="/uploads/simple-calculator.webp" alt="Picture-1" />
+              <div class="card-body">
+                <h3>Calculator Using HTML & CSS</h3>
+                <p>
+                  A sleek, responsive calculator UI prototype built with pure
+                  HTML and CSS—no JavaScript. It showcases semantic markup, CSS
+                  Grid for the keypad layout, and polished hover/active states
+                  for realistic button feedback. Designed to highlight front-end
+                  layout skills rather than arithmetic logic.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <img src="/uploads/to-do-list-app.webp" alt="Picture-1" />
+              <div class="card-body">
+                <h3>To-do List</h3>
+                <p>
+                  A clean and simple to-do list manager built with HTML, CSS,
+                  and JavaScript to help users track daily tasks efficiently
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <img src="/uploads/sticky-notes.jpg" alt="Picture-1" />
+              <div class="card-body">
+                <h3>Sticky Notes</h3>
+                <p>
+                  A fun and interactive sticky notes web app built with HTML,
+                  CSS, and JavaScript. It allows users to create colorful notes
+                  for quick reminders and ideas.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <h2 id="skills-title">Skills</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 id="contact-title">Contact</h2>
+          <address>
+            Email:
+            <a href="bangalaochiquecruiz@gmail.com"
+              >bangalaochiquecruiz@gmail.com</a
+            ><br />
+            Location: Butuan City, Philippines
+          </address>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span id="year">2025</span> Chique Cruiz | All rights reserved
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
