@@ -207,11 +207,7 @@ saveBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-<<<<<<< HEAD
 // === Add Project Card ===
-=======
-
->>>>>>> fb9bb693fc961c37dafd6e22249ca7eb86cdd7e2
 function addProjectCard(title, desc, imgPath) {
   const newCard = document.createElement("div");
   newCard.classList.add("cards");
@@ -227,10 +223,7 @@ function addProjectCard(title, desc, imgPath) {
   projectsContainer.appendChild(newCard);
 }
 
-<<<<<<< HEAD
 // === Uploads Form (profile/project images) ===
-=======
->>>>>>> fb9bb693fc961c37dafd6e22249ca7eb86cdd7e2
 if (uploadsForm) {
   uploadsForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -248,11 +241,7 @@ if (uploadsForm) {
       uploadsStatus.textContent = "Uploads successful!";
       uploadsStatus.style.color = "green";
 
-<<<<<<< HEAD
       // Example: update profile photo automatically
-=======
-      
->>>>>>> fb9bb693fc961c37dafd6e22249ca7eb86cdd7e2
       const profileImg = document.querySelector("#profile-img");
       if (profileImg) {
         profileImg.src = data.filePath;
