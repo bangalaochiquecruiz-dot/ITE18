@@ -10,7 +10,6 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-// Serve index.html, script.js, style.css directly from root
 app.use(express.static(__dirname));
 
 // Serve uploaded images
